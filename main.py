@@ -71,6 +71,7 @@ def result(status):
 # run logic at 12 AM
 schedule.every().day.at("00:00").do(fetch_leetcode, username, questions)
 
-while True:
+run = True
+while run:
     schedule.run_pending()
     sleep(5)
